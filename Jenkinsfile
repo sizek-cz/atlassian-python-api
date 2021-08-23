@@ -118,6 +118,10 @@ def copyArtifact(){
 
 def buildPackage() {
 
+    sh 'sudo sh -c \'echo "deb https://packages.atlassian.com/debian/atlassian-sdk-deb/ stable contrib" >>/etc/apt/sources.list\''
+    sh 'wget https://packages.atlassian.com/api/gpg/key/public'
+    sh 'sudo apt-key add public'
+
     def DIST = sh (
 	script: 'lsb_release -sc',
         returnStdout: true
