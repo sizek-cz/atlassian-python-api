@@ -20,6 +20,7 @@ pipeline {
     
     stages {
 
+/*
         stage('debian-stable') {
             agent {
                 docker { image 'vitexsoftware/debian:stable' }
@@ -42,7 +43,7 @@ pipeline {
 
             
         }
-
+*/
         stage('debian-testing') {
             agent {
                 docker { image 'vitexsoftware/debian:testing' }
