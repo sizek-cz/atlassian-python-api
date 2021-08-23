@@ -1,0 +1,5 @@
+atlassian-python-api (3.13.0) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- vagrant <vagrant@ubuntu2004.localdomain>  Fri, 20 Aug 2021 18:21:16 +0000
