@@ -43,7 +43,6 @@ pipeline {
 
             
         }
-*/
         stage('debian-testing') {
             agent {
                 docker { image 'vitexsoftware/debian:testing' }
@@ -63,6 +62,7 @@ pipeline {
                 }
             }
         }
+*/
 
         stage('ubuntu-focal') {
             agent {
@@ -121,7 +121,7 @@ def buildPackage() {
 
     sh 'sudo sh -c \'echo "deb https://packages.atlassian.com/debian/atlassian-sdk-deb/ stable contrib" >>/etc/apt/sources.list\''
     sh 'wget https://packages.atlassian.com/api/gpg/key/public'
-    sh 'sudo apt-key add public'
+    sh 'sudo apt-key add public ; rm -rf public'
 
     def DIST = sh (
 	script: 'lsb_release -sc',
